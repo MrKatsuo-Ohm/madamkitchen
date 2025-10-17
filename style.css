@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Global Styles */
+body {
+    font-family: "Fahkwang", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F4; /* สีครีมนวล */
+    color: #333;
+}
+.logo {
+    font-family: 'Georgia', serif; /* ใช้ฟอนต์ที่ดูหรูหราสำหรับโลโก้ */
+    font-size: 24px;
+    font-weight: bold;
+    color: #8B4513; /* สีน้ำตาลเข้ม */
+}
+
+/* Header / Navigation */
+.header {
+    /* เพิ่ม: ทำให้ Header ติดอยู่ด้านบนเมื่อเลื่อนหน้าจอ */
+    position: sticky; 
+    top: 0;
+    z-index: 1000; /* ให้ Header อยู่เหนือองค์ประกอบอื่นๆ */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* เพิ่มเงาให้ดูโดดเด่น */
+}
+.nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav a:hover {
+    color: #A0522D;
+}
+.lang-btn {
+    border: none;
+    background: none;
+    color: #8B4513;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 5px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+.lang-btn.active {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    min-height: 80vh;
+    background-color: #F8F8F4;
+}
+.hero-image-container {
+    flex: 1;
+    /* ตัวอย่างการใช้รูปภาพผัดกะเพราเป็นพื้นหลัง */
+    background-image: url('/img/padkrapaokaidao.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    background-color: #FDFDFA;
+}
+
+/* ------------------------------------------------ */
+/* การปรับปรุง: ขนาดตัวอักษร 'พอดีๆ' สำหรับสโลแกน */
+/* ------------------------------------------------ */
+
+.hero-slogan {
+    font-size: 25px; /* ปรับลดลงมา (เดิม 40px) */
+    font-weight: 600; 
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.2;
+}
+
+/* สโลแกนบรรทัดที่สอง (ใช้สำหรับ 'Just Like Mom's Cooking' หรือ 'เหมือนคุณแม่ทำให้ทาน') */
+.hero-slogan + .hero-slogan {
+    margin-top: -10px; 
+    font-size: 25px; /* ปรับลดลงมา (เดิม 36px) */
+    font-weight: 400; 
+}
+
+/* ------------------------------------------------ */
+
+
+/* --- ANIMATIONS (ลูกเล่นเคลื่อนไหว) --- */
+
+@keyframes cardPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.01); } /* ขยาย 1% ของขนาดการ์ดทั้งหมด */
+    100% { transform: scale(1); }
+}
+
+@keyframes subtleBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+
+
+.cta-button {
+    display: block;
+    width: 250px;
+    padding: 15px 30px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+}
+.cta-order {
+    background-color: #A0522D; /* สีน้ำตาลอบอุ่น */
+    color: white;
+    /* เรียกใช้ Animation เด้งดึง */
+    animation: subtleBounce 2s ease-in-out infinite; 
+}
+.cta-order:hover {
+    background-color: #8B4513; 
+    transform: scale(1.05); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    animation: none; /* หยุด animation เมื่อชี้ */
+}
+.cta-menu {
+    background-color: transparent;
+    color: #A0522D;
+    border: 2px solid #A0522D;
+}
+.cta-menu:hover {
+    background-color: #A0522D;
+    color: white;
+    transform: scale(1.05);
+}
+
+.menu-section {
+    padding: 80px 40px;
+    text-align: center;
+}
+.menu-section h2 {
+    color: #A0522D;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* ระยะห่างระหว่างเมนู */
+    max-width: 1200px;
+    margin: 40px auto;
+}
+.menu-item {
+    width: 30%;
+    border: 1px solid #E0E0E0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    
+    /* คง: Hover Effect Transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* NEW: เรียกใช้ Animation ให้กับกรอบการ์ด */
+    animation: cardPulse 4s ease-in-out infinite; /* ขยายเข้า-ออกช้าๆ ตลอดเวลา */
+}
+/* 3. ปรับปรุง Hover Effect ของ .menu-item (เพื่อให้มันยังทำงานอยู่) */
+.menu-item:hover {
+    transform: translateY(-10px) scale(1.02); /* ลอยขึ้นและขยายเล็กน้อยเมื่อชี้ */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* เงาเข้มขึ้น */
+    animation: none; /* NEW: หยุด Animation เมื่อผู้ใช้นำเมาส์มาชี้ */
+}
+.hidden-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+.visible-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* 2. นำ Animation ไปใช้กับรูปภาพภายในเมนู */
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    /* OLD: ควรลบ animation: menuPulse ...; ออกจากตรงนี้ */
+    /* NEW: ไม่ต้องมี animation ตรงนี้แล้ว */
+    transition: transform 0.3s ease; /* คง transition ไว้เผื่ออนาคต */
+}
+.order-item-btn {
+    display: inline-block;
+    background-color: #38761D; /* สีเขียวสำหรับปุ่มสั่งอาหารย่อย */
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+.order-item-btn:hover {
+    background-color: #2F5F17;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #F8F8F4;
+    font-size: 14px;
+}
