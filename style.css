@@ -226,3 +226,1906 @@ body {
     color: #F8F8F4;
     font-size: 14px;
 }
+/* =======================================
+   ABOUT PAGE STYLES
+   ======================================= */
+
+/* General Layout for About Page */
+.about-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4noaGdXLCNZooXxOkMKDGhTZ70mOeXvJW_ZXzloVP53eA8R3uisEzXrV6Ipo06kyLERz3EnmHS3CQ6sou1bRCFktmt57Ke5pZePZHvYpDlJt2VNvyXy0I6HNa6mvLW-TSOjyGTkjV7oDtkos=s680-w680-h510-rw') no-repeat center center; /* Replace with an image of a nice kitchen or Thai ingredient spread */
+    background-size: cover;
+    height: 40vh; /* Shorter hero section for inner page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.about-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-hero-content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* About Content Section */
+.about-content-section {
+    padding: 60px 5% 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-content-section h2 {
+    font-size: 2.5rem;
+    color: #a0522d; /* A rich brown color */
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #a0522d;
+    padding-bottom: 10px;
+}
+
+/* Story Container (Image and Text) */
+.story-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.story-text {
+    flex: 2;
+}
+
+.story-image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.story-image-container img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.image-caption {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Core Values Section */
+.values-container {
+    margin-top: 40px;
+}
+
+.values-container h2 {
+    border: none;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.values-list li {
+    background-color: #fff8e1; /* A light, creamy background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 250px;
+    font-size: 1.1rem;
+}
+
+.values-list strong {
+    display: block;
+    font-size: 1.25rem;
+    color: #8b4513; /* A strong brown color */
+    margin-bottom: 10px;
+}
+
+/* Responsive Adjustments for About Page */
+@media (max-width: 768px) {
+    .story-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .story-text, .story-image-container {
+        flex: none;
+        width: 100%;
+    }
+    
+    .story-image-container img {
+        max-width: 80%;
+    }
+
+    .about-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .values-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .values-list li {
+        width: 80%;
+        min-width: unset;
+    }
+}
+
+/* Ensure the 'active' state for the About link in the header */
+.nav-link.active {
+    border-bottom: 2px solid #a0522d; /* Use your primary color */
+}
+.nav-link.active {
+    border-bottom: 2px solid #a0522d; /* ใช้สีหลักของคุณ */
+}
+/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}
+/* =======================================
+   ABOUT PAGE ENHANCEMENTS (ลูกเล่น)
+   ======================================= */
+
+/* 1. Parallax Effect for Hero Section */
+.about-hero-section {
+    /* (โค้ดเดิม) */
+    background-attachment: fixed; /* ลูกเล่น Parallax */
+    position: relative; /* เพื่อให้เนื้อหาอยู่เหนือภาพ */
+}
+/* Note: Parallax อาจไม่ทำงานบนมือถือ, เบราว์เซอร์จะเปลี่ยนไปใช้ scroll ปกติ */
+
+
+/* 2. Team Section Styling */
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fcfbf8; /* สีพื้นหลังอ่อนๆ */
+}
+
+.team-section h2 {
+    color: #a0522d;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #a0522d;
+    display: inline-block;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 250px;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* ลูกเล่นยกตัวขึ้นเมื่อเอาเมาส์มาวาง */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #f0e68c; /* สีเหลืองทอง */
+}
+
+.member-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #a0522d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive for Team Section */
+@media (max-width: 992px) {
+    .team-grid {
+        flex-wrap: wrap;
+    }
+    .team-member {
+        flex: 1 1 calc(50% - 30px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 1 1 100%; /* แสดง 1 คอลัมน์ */
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madam's Kitchen - About Us / เกี่ยวกับเรา</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header class="header">
+        <div class="logo">Madam's Kitchen</div>
+        <nav class="nav">
+            <a href="index.html#menu" class="nav-link" data-i18n-key="nav_menu">Menu / เมนู</a>
+            <a href="about.html" class="nav-link active" data-i18n-key="nav_about">About / เกี่ยวกับเรา</a>
+            <a href="index.html#contact" class="nav-link" data-i18n-key="nav_contact">Contact / ติดต่อ</a>
+        </nav>
+        <div class="language-switcher">
+            <button id="lang-th" class="lang-btn active" data-lang="th">THAI</button> 
+            <button id="lang-en" class="lang-btn" data-lang="en">ENGLISH</button>
+        </div>
+    </header>
+
+    <section class="about-hero-section">
+        <div class="about-hero-content">
+            <h1 data-i18n-key="about_hero_title">Our Story / เรื่องราวของเรา</h1>
+            <p data-i18n-key="about_hero_subtitle">A taste of tradition, served with passion. / รสชาติแห่งประเพณี เสิร์ฟด้วยความหลงใหล</p>
+        </div>
+    </section>
+
+    <section class="about-content-section">
+        <div class="story-container">
+            <div class="story-text">
+                <h2 data-i18n-key="about_story_heading">From Thailand to Your Table / จากไทยสู่โต๊ะอาหารของคุณ</h2>
+                <p data-i18n-key="about_story_paragraph1">Madam's Kitchen was founded in 2025 with a simple mission: to bring the authentic, vibrant flavors of Thai home cooking to the world. Our recipes have been passed down through generations, ensuring every dish carries the warmth and tradition of Thailand. We use only the freshest local ingredients and traditional techniques to create a truly unforgettable culinary experience. / ครัวคุณนายก่อตั้งขึ้นในปี 2568 ด้วยภารกิจง่ายๆ คือการนำรสชาติอาหารไทยต้นตำรับที่มีชีวิตชีวามาสู่ทั่วโลก สูตรอาหารของเราสืบทอดกันมาหลายชั่วอายุคน ทำให้มั่นใจได้ว่าทุกจานจะเต็มไปด้วยความอบอุ่นและประเพณีของประเทศไทย เราใช้เฉพาะวัตถุดิบในท้องถิ่นที่สดใหม่ที่สุดและเทคนิคแบบดั้งเดิมเพื่อสร้างสรรค์ประสบการณ์การทำอาหารที่น่าจดจำอย่างแท้จริง</p>
+                <p data-i18n-key="about_story_paragraph2">Our namesake, the 'Madam,' is the heart and soul of our kitchen. Her dedication to culinary perfection and her passion for sharing Thai culture through food inspire our entire team. Come and taste the difference tradition makes! / 'คุณนาย' ผู้เป็นชื่อร้านของเรา คือหัวใจและจิตวิญญาณของห้องครัวของเรา ความทุ่มเทของเธอในความเป็นเลิศด้านอาหารและความหลงใหลในการแบ่งปันวัฒนธรรมไทยผ่านอาหารเป็นแรงบันดาลใจให้กับทีมงานทั้งหมดของเรา มาลิ้มลองความแตกต่างที่เกิดจากประเพณีกัน!</p>
+            </div>
+            <div class="story-image-container">
+                <img src="/img/madam-portrait.jpg" alt="Portrait of Madam, the founder" data-i18n-key="about_image_alt">
+                <p class="image-caption" data-i18n-key="about_image_caption">The founder, preparing a signature dish. / ผู้ก่อตั้ง กำลังเตรียมอาหารจานเด่น</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="values-container">
+            <h2 data-i18n-key="about_values_heading">Our Core Values / ค่านิยมหลักของเรา</h2>
+            <ul class="values-list">
+                <li><strong data-i18n-key="value_authenticity">Authenticity:</strong> Using time-honored recipes and traditional ingredients. / <strong data-i18n-key="value_authenticity_th">ความเป็นต้นตำรับ:</strong> ใช้สูตรอาหารที่สืบทอดมานานและวัตถุดิบแบบดั้งเดิม</li>
+                <li><strong data-i18n-key="value_freshness">Freshness:</strong> Sourcing the best local produce daily. / <strong data-i18n-key="value_freshness_th">ความสดใหม่:</strong> จัดหาผลผลิตในท้องถิ่นที่ดีที่สุดทุกวัน</li>
+                <li><strong data-i18n-key="value_passion">Passion:</strong> Cooking with heart and sharing the joy of Thai food. / <strong data-i18n-key="value_passion_th">ความหลงใหล:</strong> ทำอาหารด้วยใจและแบ่งปันความสุขของอาหารไทย</li>
+            </ul>
+        </div>
+    </section>
+    
+        <hr>
+
+        <section class="team-section">
+            <h2 data-i18n-key="about_team_heading">Meet Our Chefs & Team / พบกับเชฟและทีมงานของเรา</h2>
+            <div class="team-grid">
+                
+                <div class="team-member" data-aos="fade-up">
+                    <div class="member-photo-container">
+                        <img src="/img/madam-portrait.jpg" alt="Madam, The Founder">
+                    </div>
+                    <h3 data-i18n-key="team_name_madam">Madam (คุณนาย)</h3>
+                    <p class="member-role" data-i18n-key="team_role_madam">Founder & Head Chef</p>
+                    <p class="member-bio" data-i18n-key="team_bio_madam">The heart of Madam's Kitchen. She brings authentic recipes and a dedication to tradition to every dish.</p>
+                </div>
+
+                <div class="team-member" data-aos="fade-up" data-aos-delay="150">
+                    <div class="member-photo-container">
+                        <img src="/img/chef-secondary.jpg" alt="Chef Sombat">
+                    </div>
+                    <h3 data-i18n-key="team_name_sombat">Chef Sombat (สมบัติ)</h3>
+                    <p class="member-role" data-i18n-key="team_role_sombat">Sous Chef & Innovation</p>
+                    <p class="member-bio" data-i18n-key="team_bio_sombat">Responsible for menu innovation, ensuring our flavors stay exciting and fresh while respecting Thai roots.</p>
+                </div>
+
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-photo-container">
+                        <img src="/img/manager.jpg" alt="Khun Lek">
+                    </div>
+                    <h3 data-i18n-key="team_name_lek">Khun Lek (คุณเล็ก)</h3>
+                    <p class="member-role" data-i18n-key="team_role_lek">Restaurant Manager</p>
+                    <p class="member-bio" data-i18n-key="team_bio_lek">Ensures every dining experience is seamless and pleasant, focusing on the highest standards of service.</p>
+                </div>
+            </div>
+        </section>
+
+    </section>
+   
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // เริ่มต้น AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1000, // ระยะเวลา animation (เป็น ms)
+            once: true // ให้ animation เกิดขึ้นแค่ครั้งเดียวเมื่อ scroll ผ่าน
+        });
+    </script>
+    <script src="script.js"></script> 
+</body>
+</html>
+    <footer class="footer">
+        © 2025 Madam's Kitchen. All Rights Reserved. | Tel: (09X) XXX-XXXX
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
